@@ -13,5 +13,7 @@ public class Main {
 
         myList.set(1,8);
         myList.printList();
+        myList.reverse();
+        myList.printList();
     }
 }

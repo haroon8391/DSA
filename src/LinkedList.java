@@ -114,6 +114,7 @@ public class LinkedList {
         newNode.next = temp.next;
         temp.next = newNode;
         length ++;
+        return true;
     }
 
     public Node remove(int index) {
@@ -136,5 +137,21 @@ public class LinkedList {
             tail = null;
         }
         return temp1;
+    }
+
+    public void reverse(){
+        Node temp = head;
+        Node before = null;
+        Node after = head.next;
+
+        head = tail;
+        tail = temp;
+
+        while(temp != head){
+            temp.next = before;
+            before = temp;
+            temp = after;
+            after = after.next;
+        }
     }
 }
