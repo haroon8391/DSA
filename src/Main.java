@@ -10,5 +10,8 @@ public class Main {
         myList.printList();
         myList.removeFirst();
         System.out.println(myList.get(2).value);
+
+        myList.set(1,8);
+        myList.printList();
     }
 }
